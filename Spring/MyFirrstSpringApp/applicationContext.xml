@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="hostel" class="com.innovationm.demo.Hostel">
+		<property name="hostelName" value="guruji pg"></property>
+		<property name="city" value="delhi"></property>
+	</bean>
+	<bean id="student" class="com.innovationm.demo.Student" autowire="byName">
+		<property name="name" value="rishabh"></property>
+		<property name="id" value="007"></property>
+		<property name="hostel" ref="hostel"></property>
+	</bean>
+</beans>
